@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国大陆客户对香港金融服务需求的调查</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .question input[type="text"], .question textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .question select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .question .options {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .question .options label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: normal;
+        }
+        .question .rating {
+            display: flex;
+            gap: 10px;
+        }
+        .question .rating label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: normal;
+        }
+        .question .rating input[type="radio"] {
+            margin: 0;
+        }
+        .privacy-notice {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .privacy-notice h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>中国大陆客户对香港金融服务需求的调查</h1>
+
+<p><strong>说明：</strong><br>
+感谢您参与本次调研。本问卷旨在了解中国大陆客户对香港金融服务的需求、认知和使用情况。您的回答将帮助我们更好地理解市场需求，并为改进服务提供依据。所有信息将严格保密，仅用于统计分析。</p>
+
+<!-- Netlify 表单 -->
+<form name="survey" method="POST" netlify>
+    <h2>第一部分：基本信息</h2>
+
+    <div class="question">
+        <label>1. 您的年龄是？</label>
+        <div class="options">
+            <label><input type="radio" name="age" value="18-25"> 18-25岁</label>
+            <label><input type="radio" name="age" value="26-35"> 26-35岁</label>
+            <label><input type="radio" name="age" value="36-45"> 36-45岁</label>
+            <label><input type="radio" name="age" value="46-55"> 46-55岁</label>
+            <label><input type="radio" name="age" value="56+"> 56岁及以上</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <label>2. 您的年收入范围是？</label>
+        <div class="options">
+            <label><input type="radio" name="income" value="<10"> 10万元以下</label>
+            <label><input type="radio" name="income" value="10-30"> 10-30万元</label>
+            <label><input type="radio" name="income" value="30-50"> 30-50万元</label>
+            <label><input type="radio" name="income" value="50-100"> 50-100万元</label>
+            <label><input type="radio" name="income" value=">100"> 100万元以上</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <label>3. 您的职业是？</label>
+        <div class="options">
+            <label><input type="radio" name="occupation" value="employee"> 企业职员</label>
+            <label><input type="radio" name="occupation" value="freelancer"> 自由职业者</label>
+            <label><input type="radio" name="occupation" value="business_owner"> 企业主</label>
+            <label><input type="radio" name="occupation" value="civil_servant"> 公务员</label>
+            <label><input type="radio" name="occupation" value="student"> 学生</label>
+            <label><input type="radio" name="occupation" value="other"> 其他（请注明）</label>
+            <input type="text" name="occupation_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <div class="question">
+        <label>4. 您所在的地区是？</label>
+        <div class="options">
+            <label><input type="radio" name="location" value="tier1"> 一线城市（如北京、上海、广州、深圳）</label>
+            <label><input type="radio" name="location" value="tier2"> 二线城市（如杭州、成都、武汉、重庆）</label>
+            <label><input type="radio" name="location" value="tier3"> 三线及以下城市</label>
+        </div>
+    </div>
+
+    <h2>第二部分：财务状况与需求</h2>
+
+    <div class="question">
+        <label>5. 您目前的财务状况如何？</label>
+        <div class="options">
+            <label><input type="radio" name="financial_status" value="savings_investments"> 有较多储蓄和投资</label>
+            <label><input type="radio" name="financial_status" value="some_savings"> 有少量储蓄和投资</label>
+            <label><input type="radio" name="financial_status" value="balanced"> 收支平衡</label>
+            <label><input type="radio" name="financial_status" value="debt"> 负债较多</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <label>6. 您最关注的财务需求是什么？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="financial_needs" value="wealth_growth"> 财富增长</label>
+            <label><input type="checkbox" name="financial_needs" value="retirement"> 退休规划</label>
+            <label><input type="checkbox" name="financial_needs" value="education"> 子女教育基金</label>
+            <label><input type="checkbox" name="financial_needs" value="insurance"> 保险保障</label>
+            <label><input type="checkbox" name="financial_needs" value="tax"> 税务规划</label>
+            <label><input type="checkbox" name="financial_needs" value="other"> 其他（请注明）</label>
+            <input type="text" name="financial_needs_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <div class="question">
+        <label>7. 您是否有过香港保险或财富管理产品的购买经验？</label>
+        <div class="options">
+            <label><input type="radio" name="hk_insurance" value="yes"> 是</label>
+            <label><input type="radio" name="hk_insurance" value="no"> 否</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <label>8. 如果有，您购买过哪些公司的产品？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="companies" value="prudential"> 保诚保险（Prudential）</label>
+            <label><input type="checkbox" name="companies" value="aia"> 友邦保险（AIA）</label>
+            <label><input type="checkbox" name="companies" value="hsbc"> 汇丰银行（HSBC）</label>
+            <label><input type="checkbox" name="companies" value="standard_chartered"> 渣打银行（Standard Chartered）</label>
+            <label><input type="checkbox" name="companies" value="boc_hk"> 中银香港（Bank of China Hong Kong）</label>
+            <label><input type="checkbox" name="companies" value="manulife"> 宏利金融（Manulife）</label>
+            <label><input type="checkbox" name="companies" value="ftlife"> 富通保险（FTLife）</label>
+            <label><input type="checkbox" name="companies" value="dfg"> Dynasty Financial Group</label>
+            <label><input type="checkbox" name="companies" value="other"> 其他（请注明）</label>
+            <input type="text" name="companies_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <h2>第三部分：保险相关问题</h2>
+
+    <div class="question">
+        <label>9. 您是否购买过香港的保险产品？</label>
+        <div class="options">
+            <label><input type="radio" name="hk_insurance_purchase" value="yes"> 是</label>
+            <label><input type="radio" name="hk_insurance_purchase" value="no"> 否</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <label>10. 如果是，您购买的是哪种类型的保险？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="insurance_types" value="life_insurance"> 人寿保险</label>
+            <label><input type="checkbox" name="insurance_types" value="health_insurance"> 医疗保险</label>
+            <label><input type="checkbox" name="insurance_types" value="investment_insurance"> 投资型保险</label>
+            <label><input type="checkbox" name="insurance_types" value="other"> 其他（请注明）</label>
+            <input type="text" name="insurance_types_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <div class="question">
+        <label>11. 您对香港保险产品的哪些方面最满意？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="satisfaction" value="coverage"> 保障范围</label>
+            <label><input type="checkbox" name="satisfaction" value="price"> 价格</label>
+            <label><input type="checkbox" name="satisfaction" value="service_quality"> 服务质量</label>
+            <label><input type="checkbox" name="satisfaction" value="other"> 其他（请注明）</label>
+            <input type="text" name="satisfaction_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <div class="question">
+        <label>12. 如果您没有购买过香港的保险产品，主要原因是什么？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="reasons" value="trust_issues"> 信任问题</label>
+            <label><input type="checkbox" name="reasons" value="information_asymmetry"> 信息不对称</label>
+            <label><input type="checkbox" name="reasons" value="regulatory_differences"> 监管差异</label>
+            <label><input type="checkbox" name="reasons" value="language_barrier"> 语言和文化障碍</label>
+            <label><input type="checkbox" name="reasons" value="other"> 其他（请注明）</label>
+            <input type="text" name="reasons_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <div class="question">
+        <label>13. 如果您没有购买过香港的保险产品，未来是否考虑购买？</label>
+        <div class="options">
+            <label><input type="radio" name="consider_purchase" value="yes"> 是</label>
+            <label><input type="radio" name="consider_purchase" value="no"> 否</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <label>14. 如果考虑购买，您对哪种类型的保险最感兴趣？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="interested_insurance" value="life_insurance"> 人寿保险</label>
+            <label><input type="checkbox" name="interested_insurance" value="health_insurance"> 医疗保险</label>
+            <label><input type="checkbox" name="interested_insurance" value="investment_insurance"> 投资型保险</label>
+            <label><input type="checkbox" name="interested_insurance" value="other"> 其他（请注明）</label>
+            <input type="text" name="interested_insurance_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <h2>第四部分：经纪服务相关问题</h2>
+
+    <div class="question">
+        <label>15. 您是否使用过或了解过香港的经纪服务？</label>
+        <div class="options">
+            <label><input type="radio" name="broker_service" value="yes"> 是</label>
+            <label><input type="radio" name="broker_service" value="no"> 否</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <label>16. 如果使用过，您使用的是哪家经纪公司？</label>
+        <input type="text" name="broker_company" placeholder="请输入公司名称">
+    </div>
+
+    <div class="question">
+        <label>17. 您是如何了解到他们的服务的？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="discovery_methods" value="friend_recommendation"> 朋友或家人推荐</label>
+            <label><input type="checkbox" name="discovery_methods" value="social_media"> 社交媒体</label>
+            <label><input type="checkbox" name="discovery_methods" value="official_channels"> 金融机构的官方渠道</label>
+            <label><input type="checkbox" name="discovery_methods" value="other"> 其他（请注明）</label>
+            <input type="text" name="discovery_methods_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <div class="question">
+        <label>18. 您为什么选择使用经纪服务？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="reasons_for_broker" value="transparency"> 透明度</label>
+            <label><input type="checkbox" name="reasons_for_broker" value="product_variety"> 产品种类</label>
+            <label><input type="checkbox" name="reasons_for_broker" value="service_quality"> 客户服务质量</label>
+            <label><input type="checkbox" name="reasons_for_broker" value="fee_structure"> 费用结构</label>
+            <label><input type="checkbox" name="reasons_for_broker" value="other"> 其他（请注明）</label>
+            <input type="text" name="reasons_for_broker_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <div class="question">
+        <label>19. 如果未使用过，您认为哪些服务差异点可能会吸引您考虑使用经纪服务？（可多选）</label>
+        <div class="options">
+            <label><input type="checkbox" name="attractive_features" value="transparency"> 透明度</label>
+            <label><input type="checkbox" name="attractive_features" value="product_variety"> 产品种类</label>
+            <label><input type="checkbox" name="attractive_features" value="service_quality"> 客户服务质量</label>
+            <label><input type="checkbox" name="attractive_features" value="fee_structure"> 费用结构</label>
+            <label><input type="checkbox" name="attractive_features" value="other"> 其他（请注明）</label>
+            <input type="text" name="attractive_features_other" placeholder="请注明">
+        </div>
+    </div>
+
+    <h2>第五部分：服务选择与顾虑</h2>
+
+    <div class="question">
+        <label>20. 在选择金融服务提供商时，以下因素对您的重要性如何？（请按1-5评分，1为完全不重要，5为非常重要）</label>
+        <div class="options">
+            <label>公司声誉：<input type="radio" name="reputation" value="1"> 1 <input type="radio" name="reputation" value="2"> 2 <input type="radio" name="reputation" value="3"> 3 <input type="radio" name="reputation" value="4"> 4 <input type="radio" name="reputation" value="5"> 5</label>
+            <label>产品收益率：<input type="radio" name="product_yield" value="1"> 1 <input type="radio" name="product_yield" value="2"> 2 <input type="radio" name="product_yield" value="3"> 3 <input type="radio" name="product_yield" value="4"> 4 <input type="radio" name="product_yield" value="5"> 5</label>
+            <label>服务质量：<input type="radio" name="service_quality_rating" value="1"> 1 <input type="radio" name="service_quality_rating" value="2"> 2 <input type="radio" name="service_quality_rating" value="3"> 3 <input type="radio" name="service_quality_rating" value="4"> 4 <input type="radio" name="service_quality_rating" value="5"> 5</label>
+            <label>费用和佣金：<input type="radio" name="fees" value="1"> 1 <input type="radio" name="fees" value="2"> 2 <input type="radio" name="fees" value="3"> 3 <input type="radio" name="fees" value="4"> 4 <input type="radio" name="fees" value="5"> 5</label>
+            <label>透明度：<input type="radio" name="transparency_rating" value="1"> 1 <input type="radio" name="transparency_rating" value="2"> 2 <input type="radio" name="transparency_rating" value="3"> 3 <input type="radio" name="transparency_rating" value="4"> 4 <input type="radio" name="transparency_rating" value="5"> 5</label>
+            <label>产品种类：<input type="radio" name="product_variety_rating" value="1"> 1 <input type="radio" name="product_variety_rating" value="2"> 2 <input type="radio" name="product_variety_rating" value="3"> 3 <input type="radio" name="product_variety_rating" value="4"> 4 <input type="radio" name="product_variety_rating" value="5"> 5</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <label>21. 在选择香港金融服务时，您最大的顾虑是什么？（请按1-5评分，1为完全不担心，5为非常担心）</label>
+        <div class="options">
+            <label>信任问题：<input type="radio" name="trust_concern" value="1"> 1 <input type="radio" name="trust_concern" value="2"> 2 <input type="radio" name="trust_concern" value="3"> 3 <input type="radio" name="trust_concern" value="4"> 4 <input type="radio" name="trust_concern" value="5"> 5</label>
+            <label>监管差异：<input type="radio" name="regulatory_concern" value="1"> 1 <input type="radio" name="regulatory_concern" value="2"> 2 <input type="radio" name="regulatory_concern" value="3"> 3 <input type="radio" name="regulatory_concern" value="4"> 4 <input type="radio" name="regulatory_concern" value="5"> 5</label>
+            <label>语言和文化障碍：<input type="radio" name="language_concern" value="1"> 1 <input type="radio" name="language_concern" value="2"> 2 <input type="radio" name="language_concern" value="3"> 3 <input type="radio" name="language_concern" value="4"> 4 <input type="radio" name="language_concern" value="5"> 5</label>
+            <label>资金流动性：<input type="radio" name="liquidity_concern" value="1"> 1 <input type="radio" name="liquidity_concern" value="2"> 2 <input type="radio" name="liquidity_concern" value="3"> 3 <input type="radio" name="liquidity_concern" value="4"> 4 <input type="radio" name="liquidity_concern" value="5"> 5</label>
+        </div>
+    </div>
+
+    <h2>第六部分：开放性问题</h2>
+
+    <div class="question">
+        <label>22. 您对香港金融服务有哪些具体的期望或建议？</label>
+        <textarea name="expectations" rows="4" cols="50"></textarea>
+    </div>
+
+    <div class="question">
+        <label>23. 您认为香港金融服务在哪些方面可以改进？</label>
+        <textarea name="improvements" rows="4" cols="50"></textarea>
+    </div>
+
+    <!-- 隐私声明 -->
+    <div class="privacy-notice">
+        <h3>隐私声明</h3>
+        <p>我们非常重视您的隐私。本问卷收集的所有信息将仅用于统计分析，不会用于任何商业用途或与第三方共享。您的回答将被严格保密。</p>
+    </div>
+
+    <button type="submit">提交</button>
+</form>
+
+<h2>感谢您的参与！</h2>
+
+</body>
+</html>
